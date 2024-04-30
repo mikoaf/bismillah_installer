@@ -1,6 +1,6 @@
 #!/bin/bash
 # Buat folder
-mkdir/home/pi/belajar_installer
+mkdir /home/pi/belajar_installer
 
 # Clone git
 echo "Install git"

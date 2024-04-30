@@ -38,3 +38,9 @@ then
     sudo pm2 save
 
     echo "Installation successfully"
+    sleep 1
+    sudo reboot
+else
+    echo "Installation unsuccesfully"
+    rm -rf /home/pi/belajar_installer
+fi

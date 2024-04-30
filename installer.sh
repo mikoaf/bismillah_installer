@@ -21,6 +21,7 @@ then
 
     #Install nodejs dan pm2
     echo "Install node & pm2"
+    sudo apt update
     sudo apt install nodejs -y
     sudo apt install npm -y
     sudo npm install -g n -y

@@ -23,14 +23,14 @@ then
     echo "Install node & pm2"
     sudo apt install nodejs -y
     sudo apt install npm -y
-    npm install -g n -y
-    n latest -y
+    sudo npm install -g n -y
+    sudo n latest -y
     sleep 0.5
-    npm install -g pm2 -y
+    sudo npm install -g pm2 -y
 
     #Install requirements library
     echo "Install requirements library"
-    pip install -r /home/pi/belajar_installer/requiremnents.txt
+    pip install -r /home/pi/belajar_installer/requirements.txt
 
     #Setting pm2
     sudo pm2 start /home/pi/belajar_installer/process.json --interpreter=/home/pi/belajar_installer/env/bin/python #atau mau di run dua2nya manual

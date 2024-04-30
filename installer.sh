@@ -9,7 +9,7 @@ sudo apt install git -y
 git clone https://github.com/mikoaf/bismillah_installer.git /home/pi/belajar_installer
 resp=$?
 
-if [$resp -eq 0]
+if [ $resp -eq 0 ]
 then
     #Install venv & pip
     echo "Install venv & pip"

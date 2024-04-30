@@ -38,7 +38,7 @@ then
     pip install -r /home/pi/belajar_installer/requirements.txt
 
     #Setting pm2
-    sudo pm2 start /home/pi/belajar_installer/process.json --interpreter=/home/pi/belajar_installer/env/bin/python #atau mau di run dua2nya manual
+    sudo pm2 start /home/pi/belajar_installer/source.json #atau mau di run dua2nya manual
     sudo pm2 startup
     sudo pm2 save
 

@@ -2,14 +2,14 @@
     "apps" : [
         {
             "name": "dht-mqtt",
-            "script": "main.py",
-            "interpreter": "python3",
+            "script": "/home/pi/belajar_installer/main.py",
+            "interpreter": "/home/pi/belajar_installer/env/bin/python",
             "env": {}
         },
         {
             "name": "mqtt-publisher",
-            "script": "publisher.py",
-            "interpreter": "python3",
+            "script": "/home/pi/belajar_installer/publisher.py",
+            "interpreter": "/home/pi/belajar_installer/env/bin/python",
             "env": {}
         }
     ]

@@ -32,14 +32,14 @@ then
     #Set up virtual environment
     sudo python -m venv /home/pi/belajar_installer/venv
     . /home/pi/belajar_installer/venv/bin/activate
-    python3 -m ensurepip
 
     #Install requirements library
     echo "Install requirements library"
     pip install -r /home/pi/belajar_installer/requirements.txt
 
     #Setting pm2
-    sudo pm2 start /home/pi/belajar_installer/process.json #atau mau di run dua2nya manual
+    sudo pm2 start /home/pi/belajar_installer/main.py --interpreter=/home/pi/belajar_installer/venv/bin/python
+    sudo pm2 start /home/pi/belajar_installer/publisher.py --interpreter=/home/pi/belajar_installer/venv/bin/python
     sudo pm2 startup
     sudo pm2 save
 

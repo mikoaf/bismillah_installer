@@ -33,6 +33,10 @@ then
     sudo python -m venv /home/pi/belajar_installer/venv
     . /home/pi/belajar_installer/venv/bin/activate
 
+    #Install adafruit dht
+    pip3 install adafruit-circuitpython-dht
+    sudo apt-get install libgpiod2
+
     #Install requirements library
     echo "Install requirements library"
     pip install -r /home/pi/belajar_installer/requirements.txt

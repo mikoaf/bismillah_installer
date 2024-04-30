@@ -14,14 +14,14 @@ then
     #Install venv & pip
     echo "Install venv & pip"
     sudo apt update -y
-    sudo apt install python3-dev -y
-    sudo apt install python3-venv -y
-    sudo apt install python3-pip -y
+    sudo apt-get install python3-dev -y
+    sudo apt-get install python3-venv -y
+    sudo apt-get install python3-pip -y
     sleep 0.5
 
     #Install nodejs dan pm2
     echo "Install node & pm2"
-    sudo apt update
+    sudo apt-get update
     sudo apt install nodejs -y
     sudo apt install npm -y
     sudo npm install -g n -y
@@ -31,7 +31,7 @@ then
 
     #Set up virtual environment
     python -m venv /home/pi/belajar_installer/venv
-    source /home/pi/belajar_installer/venv/bin/activate
+    . /home/pi/belajar_installer/venv/bin/activate
 
     #Install requirements library
     echo "Install requirements library"

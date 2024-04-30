@@ -28,6 +28,10 @@ then
     sleep 0.5
     sudo npm install -g pm2 -y
 
+    #Set up virtual environment
+    python -m venv /home/pi/belajar_installer/venv
+    source /home/pi/belajar_installer/venv/bin/activate
+
     #Install requirements library
     echo "Install requirements library"
     pip install -r /home/pi/belajar_installer/requirements.txt

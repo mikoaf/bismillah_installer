@@ -34,8 +34,8 @@ then
     . /home/pi/belajar_installer/venv/bin/activate
 
     #Install adafruit dht
-    pip3 install adafruit-circuitpython-dht
-    sudo apt-get install libgpiod2
+    pip3 install --timeout 300 adafruit-circuitpython-dht
+    sudo apt-get --timeout 300 install libgpiod2
 
     #Install requirements library
     echo "Install requirements library"

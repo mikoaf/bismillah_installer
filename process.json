@@ -1,0 +1,16 @@
+{
+    "apps" : [
+        {
+            "name": "dht-mqtt",
+            "script": "main.py",
+            "interpreter": "python3",
+            "env": {}
+        },
+        {
+            "name": "mqtt-publisher",
+            "script": "publisher.py",
+            "interpreter": "python3",
+            "env": {}
+        }
+    ]
+}

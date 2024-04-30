@@ -1,8 +1,12 @@
 #!/bin/bash
+# Buat folder
+mkdir/home/pi/belajar_installer
+
+# Clone git
 echo "Install git"
 sudo apt install git -y
 
-git clone "link github" "direktori tujuan"
+git clone https://github.com/mikoaf/bismillah_installer.git /home/pi/belajar_installer
 resp=$?
 
 if [$resp -eq 0]
@@ -26,10 +30,10 @@ then
 
     #Install requirements library
     echo "Install requirements library"
-    pip install -r "direktori di raspi"
+    pip install -r /home/pi/belajar_installer/requiremnents.txt
 
     #Setting pm2
-    sudo pm2 start "direktori file json di raspi" #atau mau di run dua2nya manual
+    sudo pm2 start /home/pi/belajar_installer/process.json --interpreter=/home/pi/belajar_installer/env/bin/python #atau mau di run dua2nya manual
     sudo pm2 startup
     sudo pm2 save
 

@@ -44,7 +44,7 @@ then
 
     echo "Installation successfully"
     sleep 1
-    sudo reboot
+    # sudo reboot
 else
     echo "Installation unsuccesfully"
     rm -rf /home/pi/belajar_installer

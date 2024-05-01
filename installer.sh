@@ -31,12 +31,17 @@ then
 
     #Set up virtual environment
     echo "===========Set up virtual environment==========="
-    sudo python -m venv /home/pi/belajar_installer/venv
+    python3 -m venv /home/pi/belajar_installer/venv
     . /home/pi/belajar_installer/venv/bin/activate
+    if [ $? -eq 0 ]; then
+        echo "===========virtual environment berhasil diaktifkan==========="
+    else
+        echo "===========virtual environment gagal diaktifkan==========="
+    fi
 
     #Install adafruit dht
     echo "===========Install adafruit dht=========="
-    python -m pip3 install --timeout 1000 adafruit-circuitpython-dht
+    python -m pip install --timeout 1000 adafruit-circuitpython-dht
     sudo apt-get --timeout 1000 install libgpiod2
 
     #Install requirements library

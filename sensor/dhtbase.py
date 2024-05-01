@@ -6,5 +6,5 @@ import asyncio
 
 class DhtBase(ABC):
     @abstractmethod
-    def getData(self,msg:str)->Tuple[Response,DhtResult]:
+    async def getData(self,msg:str)->Tuple[Response,DhtResult]:
         pass

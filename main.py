@@ -8,8 +8,6 @@ def on_connect(client, userdata, flags, rc, pr):
     client.subscribe("komdat/dht")
 
 def on_message(client, userdata, msg):
-    # print(msg.topic+" "+str(msg.payload))
-    # print('haha')
     if msg.payload.decode('utf-8') == 'run':
         p = Sen.getData('run')
         print(p)

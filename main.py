@@ -10,9 +10,9 @@ def on_connect(client, userdata, flags, rc, pr):
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
     # print('haha')
-    # if msg.payload.decode('utf-8') == 'run':
-    #     p = Sen.getData('run')
-    #     print(p)
+    if msg.payload.decode('utf-8') == 'run':
+        p = Sen.getData('run')
+        print(p)
     # asyncio.create_task(handle_message(msg))
 
 # async def handle_message(msg):

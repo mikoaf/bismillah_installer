@@ -50,8 +50,8 @@ then
 
     #Setting pm2
     echo "===========Set up pm2==========="
-    sudo pm2 start /home/pi/belajar_installer/main.py --interpreter=/home/pi/belajar_installer/venv/bin/python
-    sudo pm2 start /home/pi/belajar_installer/publisher.py --interpreter=/home/pi/belajar_installer/venv/bin/python
+    sudo pm2 start /home/pi/belajar_installer/main.py -f --interpreter=/home/pi/belajar_installer/venv/bin/python
+    sudo pm2 start /home/pi/belajar_installer/publisher.py -f --interpreter=/home/pi/belajar_installer/venv/bin/python
     sudo pm2 startup
     sudo pm2 save
 

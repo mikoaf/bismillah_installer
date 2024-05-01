@@ -36,13 +36,12 @@ then
 
     #Install adafruit dht
     echo "===========Install adafruit dht=========="
-    pip3 install --timeout 1000 adafruit-circuitpython-dht
+    python -m pip3 install --timeout 1000 adafruit-circuitpython-dht
     sudo apt-get --timeout 1000 install libgpiod2
 
     #Install requirements library
     echo "===========Install requirements library==========="
-    echo "Install requirements library"
-    pip install -r /home/pi/belajar_installer/requirements.txt
+    python -m pip install -r /home/pi/belajar_installer/requirements.txt
 
     #Setting pm2
     echo "===========Set up pm2==========="

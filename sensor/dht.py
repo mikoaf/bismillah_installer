@@ -8,7 +8,7 @@ class Dht(DhtBase):
     def __init__(self) -> None:
         super().__init__()
         self.dht11_sensor = adafruit_dht.DHT11(board.D26)
-    async def getData(self, msg: str) -> Tuple[Response, DhtResult]:
+    def getData(self, msg: str) -> Tuple[Response, DhtResult]:
         try:
             suhu = self.dht11_sensor.temperature
             lemb = self.dht11_sensor.humidity

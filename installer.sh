@@ -42,7 +42,7 @@ then
     #Install adafruit dht
     echo "===========Install adafruit dht=========="
     python -m pip install --timeout 1000 adafruit-circuitpython-dht
-    sudo apt-get --timeout 1000 install libgpiod2
+    sudo apt-get install libgpiod2
 
     #Install requirements library
     echo "===========Install requirements library==========="

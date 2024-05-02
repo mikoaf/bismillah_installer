@@ -4,7 +4,6 @@ from paho.mqtt import client as mqtt
 Sen = Dht()
 
 def on_connect(client, userdata, flags, rc, pr):
-    print(f"Connected with result code {rc}")
     client.subscribe("komdat/dht")
 
 def on_message(client, userdata, msg):

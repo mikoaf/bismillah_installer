@@ -6,7 +6,7 @@ mkdir /home/pi/belajar_installer
 echo "===========Install git==========="
 sudo apt install git -y
 
-git clone -b coba https://github.com/mikoaf/bismillah_installer.git /home/pi/belajar_installer
+git clone -b 'coba' https://github.com/mikoaf/bismillah_installer.git /home/pi/belajar_installer
 resp=$?
 
 if [ $resp -eq 0 ]

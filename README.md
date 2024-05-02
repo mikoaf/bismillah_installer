@@ -9,6 +9,16 @@
 
 - MQTT
 
+## Config Files
+
+.env
+
+#### BROKER="mqtt.eclipseprojects.io"
+
+#### PORT=1883
+
+#### TOPIC="komdat/dht"
+
 ## How it works?
 
 ```mermaid

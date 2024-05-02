@@ -11,7 +11,8 @@
 
 ## How it works?
 
-mermaid
+```mermaid
+
 sequenceDiagram
 participant pub as Publisher
 participant br as Broker
@@ -33,6 +34,7 @@ participant sub as Subscriber
     alt if message<br/>run
         sub->>sub:Response dht
     end
+```
 
 ## Format Response mqtt
 
@@ -44,10 +46,13 @@ Response(status=StatusResponse.response, message=str), DhtResult(humidity=lemb, 
 
 ## Example Format Response
 
-- mqtt
-  Response(status=StatusResponse.success, message="Message Published.")
-- dht
-  (Response(status=<StatusResponse.success: 0>, message='success'), DhtResult(humidity=56.0, temp=26.0))
+#### MQTT
+
+- Response(status=StatusResponse.success, message="Message Published.")
+
+#### DHT
+
+- (Response(status=<StatusResponse.success: 0>, message='success'), DhtResult(humidity=56.0, temp=26.0))
 
 ## Contributors
 

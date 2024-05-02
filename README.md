@@ -56,4 +56,4 @@ Response(status=StatusResponse.response, message=str), DhtResult(humidity=lemb, 
 
 ## Contributors
 
-- mikoaf (mikoalfandi2801@gmail.com)
+- @mikoaf (mikoalfandi2801@gmail.com)

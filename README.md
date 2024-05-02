@@ -46,13 +46,11 @@ participant sub as Subscriber
     end
 ```
 
-## Format Response mqtt
+## Format Response
 
-Response(status=StatusResponse.response, message=str)
-
-## Format Response dht
-
-Response(status=StatusResponse.response, message=str), DhtResult(humidity=lemb, temp=suhu)
+| Format response MQTT                                  | Format response DHT                                                                        |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Response(status=StatusResponse.response, message=str) | Response(status=StatusResponse.response, message=str), DhtResult(humidity=lemb, temp=suhu) |
 
 ## Example Format Response
 

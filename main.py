@@ -1,10 +1,18 @@
 from sensor.dht import Dht
 from paho.mqtt import client as mqtt
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+my_broker = os.getenv("BROKER")
+my_port = os.getenv("PORT")
+my_topic = os.getenv("TOPIC")
 
 Sen = Dht()
 
 def on_connect(client, userdata, flags, rc, pr):
-    client.subscribe("komdat/dht")
+    client.subscribe(my_topic)
 
 def on_message(client, userdata, msg):
     if msg.payload.decode('utf-8') == 'run':
@@ -22,7 +30,7 @@ def mqtt_loop():
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     client.on_message = on_message
     client.on_connect = on_connect
-    client.connect("mqtt.eclipseprojects.io", 1883, 60)
+    client.connect(my_broker, my_port, 60)
     client.loop_forever()
     # client.loop_start()
     # try:

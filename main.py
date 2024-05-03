@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 my_broker = os.getenv("BROKER")
-my_port = os.getenv("PORT")
+my_port = int(os.getenv("PORT"))
 my_topic = os.getenv("TOPIC")
 
 Sen = Dht()

@@ -12,7 +12,7 @@ class mqqts(MqttSend):
     async def MqttMsg(self, msg: str) -> Response:
         try:
             broker_address = os.getenv("BROKER")
-            broker_port = os.getenv("PORT")
+            broker_port = int(os.getenv("PORT"))
             topic = os.getenv("TOPIC")
             client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
             client.connect(broker_address, broker_port)

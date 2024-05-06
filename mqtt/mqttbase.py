@@ -6,5 +6,5 @@ import asyncio
 
 class MqttSend(ABC):
     @abstractmethod
-    async def MqttMsg(self,msg:str)->Response:
+    def MqttMsg(self,msg:str)->Response:
         pass
